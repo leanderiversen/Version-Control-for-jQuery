@@ -24,33 +24,33 @@ If you like the plugin, please review it! Every review is highly appreciated, bu
 
 
 ## Changelog
-= 1.0.8 =
+### 1.0.8
 * jQuery Core versions 3.3.0 and 3.3.1 have been added.
 * Minor adjustments.
 
-= 1.0.7 =
+### 1.0.7
 * Minor adjustments.
 * Support for WordPress 4.9.
 
-= 1.0.6 =
+### 1.0.6
 * jQuery Migrate version 3.0.1 has been added.
 
-= 1.0.5 =
+### 1.0.5
 * A bug that caused jQuery Core and jQuery Migrate to be dequeued while logged in to the admin area has now been resolved.
 
-= 1.0.4 =
+### 1.0.4
 * Added the pre-versions of jQuery Core version 3.2.2 and jQuery Migrate version 3.0.1, in case you want to test your website with the upcoming versions of jQuery. The plugin still defaults to the latest stable version of jQuery.
 
-= 1.0.3 =
+### 1.0.3
 * jQuery Core versions 3.2.0 and 3.2.1 have been added.
 
-= 1.0.2 =
+### 1.0.2
 * Corrected the way of requiring the "Settings" page. Thanks to Ivaylo Draganov for noticing!
 * Minor adjustments.
 
-= 1.0.1 =
+### 1.0.1
 * jQuery Core version 3.1.1 has been added.
 * The plugin now supports the Norwegian language.
 
-= 1.0 =
+### 1.0
 * Initial release
