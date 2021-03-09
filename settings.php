@@ -17,7 +17,7 @@ class Page {
 	}
 
 	public static function instance() {
-		if ( is_null( self::$instance ) ) {
+		if( is_null( self::$instance ) ) {
 			self::$instance = new self();
 		}
 		return self::$instance;
@@ -54,6 +54,14 @@ class Page {
 			'vcfj_pluginPage_section' 
 		);
 
+		add_settings_field( 
+			'vcfj_migrate_disable', 
+			__( 'Disable jQuery Migrate?', 'version-control-for-jquery' ), 
+			[$this, 'migrate_disable'], 
+			'vcfj_settings_page',
+			'vcfj_pluginPage_section' 
+		);
+
 	}
 
 	public function select_core_version() { 
@@ -70,6 +78,7 @@ class Page {
 
 		$versions = [
 			'git-build' => '(Git Build)',
+			'3.6.0' => '3.6.0',
 			'3.5.1' => '3.5.1',
 			'3.5.0' => '3.5.0',
 			'3.4.1' => '3.4.1',
@@ -159,6 +168,7 @@ class Page {
 
 		$versions = [
 			'git-build' => '(Git Build)',
+			'3.3.2' => '3.3.2',
 			'3.3.1' => '3.3.1',
 			'3.3.0' => '3.3.0',
 			'3.2.0' => '3.2.0',
@@ -177,6 +187,20 @@ class Page {
 
 		$this->output_select('migrate', $migrate_version, $versions);
 
+	}
+
+	public function migrate_disable() {
+		$options = get_option( 'vcfj_settings' );
+
+		$checked = '';
+
+		if( isset($options['vcfj_migrate_disable']) ) {
+			if( $options['vcfj_migrate_disable'] == 1) {
+				$checked = 'checked="checked"';
+			}
+		}
+
+		printf( '<input type="checkbox" name="vcfj_settings[vcfj_migrate_disable]" value="1" %s />', $checked );
 	}
 
 	private function output_select($type, $current, $values) {
@@ -272,14 +296,20 @@ class Page {
 				$vcfj_migrate_version = $options['vcfj_migrate_version'];
 			}
 
-			// Enqueue the new and minified jQuery Migrate
-			if( 'git-build' === $options['vcfj_migrate_version'] ) {
-				// Register the git build
-				wp_enqueue_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-git.min.js', [ 'jquery' ], $vcfj_migrate_version );
-			} else {
-				// Register the stable version
-				wp_enqueue_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-' . $vcfj_migrate_version . '.min.js', [ 'jquery' ], $vcfj_migrate_version );
+			// Check if jQuery Migrate has been disabled
+			if( !isset( $options['vcfj_migrate_disable'] ) || $options['vcfj_migrate_disable'] !== '1' ) {
+
+				// Enqueue the new and minified jQuery Migrate
+				if( 'git-build' === $options['vcfj_migrate_version'] ) {
+					// Register the git build
+					wp_enqueue_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-git.min.js', [ 'jquery' ], $vcfj_migrate_version );
+				} else {
+					// Register the stable version
+					wp_enqueue_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-' . $vcfj_migrate_version . '.min.js', [ 'jquery' ], $vcfj_migrate_version );
+				}
+
 			}
+
 		}
 	}
 
