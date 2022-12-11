@@ -1,0 +1,20 @@
+name: WPCS
+on: push
+  push:
+    branches:
+      - development
+jobs:
+  phpcs:
+      name: WPCS
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: WPCS check
+          uses: 10up/wpcs-action@stable
+          with:
+            standard: 'WordPress-Core'
+        - name: Update summary
+          run: |
+            npx --yes github:10up/phpcs-json-to-md --path ./phpcs.json --output ./phpcs.md
+            cat phpcs.md >> $GITHUB_STEP_SUMMARY
+          if: always()
