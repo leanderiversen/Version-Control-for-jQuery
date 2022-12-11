@@ -12,6 +12,5 @@ jobs:
         - name: WPCS check
           uses: 10up/wpcs-action@stable
           with:
-            enable_warnings: true
-            paths: 'init.php mappings.php settings.php'
+            excludes: '/github'
             standard: 'WordPress-Core'
