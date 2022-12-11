@@ -12,9 +12,6 @@ jobs:
         - name: WPCS check
           uses: 10up/wpcs-action@stable
           with:
+            enable_warnings: true
+            paths: 'init.php mappings.php settings.php'
             standard: 'WordPress-Core'
-        - name: Update summary
-          run: |
-            npx --yes github:10up/phpcs-json-to-md --path ./phpcs.json --output ./phpcs.md
-            cat phpcs.md >> $GITHUB_STEP_SUMMARY
-          if: always()
