@@ -3,15 +3,15 @@ Version Control for jQuery is one of the easiest ways to control the version of 
 
 - Contributors: leanderiversen
 - Tags: jquery, core, migrate, javascript, update, control, version
-- Requires at least: 4.0
-- Tested up to: 5.7
-- Stable tag: 2.0.3
-- Requires PHP: 7.1
+- Requires at least: 5.0
+- Tested up to: 6.1.1
+- Stable tag: 3.0.3
+- Requires PHP: 7.4
 - License: GPLv2 or later
 - License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
-Version Control for jQuery is one of the easiest ways to control the version of jQuery used on your website. Whether you just want to run a stable WordPress website, or if you are a developer and want to cross check your website with the various version of jQuery, the plugin will always have the latest minified version of jQuery ready for you, loaded from the fast jQuery CDN. The plugin will default to the latest pre-release of both jQuery Core and jQuery Migrate, but this can easily be changed from the settings page, in case you prefer to use the latest official release.
+Version Control for jQuery is one of the easiest ways to control the version of jQuery used on your website. Whether you just want to run a stable WordPress website, or if you are a developer and want to validate compatibility on your website with the various version of jQuery, the plugin will always have the latest minified version of jQuery ready for you. By default, the files will be loaded from the fast jQuery CDN, but you will also have the option to choose cdnjs or Google CDN.
 
 Please notice that no files are replaced, therefore deactivation of this plugin returns your site to its original state.
 
@@ -22,8 +22,24 @@ Please notice that no files are replaced, therefore deactivation of this plugin 
 
 ## Changelog
 
+### 3.0.3
+* Fixed a bug that could cause the wrong version of jQuery Migrate to appear as the selected version on the settings page.
+
+### 3.0.2
+* Fixed a bug that could cause an error if the settings were left untouched following installation of the plugin.
+
+### 3.0.1
+* Fixed a bug where the 'vcfj_core_disable' array key could be undefined.
+
 ### 3.0
-* Large internal rewrite, which means that the plugin now requires PHP 7.1 or above to function.
+* Added support to set cdnjs and Google as your preferred CDN. If the selected version is not hosted by these providers, it will fall back to the jQuery CDN.
+* Added support to disable jQuery Core.
+* Support for PHP 5.6 has been dropped. To continue using the plugin, please upgrade to PHP 7.4 or above.
+
+### 2.1
+* jQuery Core version 3.6.1 has been added.
+* jQuery Migrate version 3.4.0 has been added.
+* Support for WordPress 4 has been dropped. To continue using the plugin, please upgrade to WordPress 5.0 or above.
 
 ### 2.0.3
 * jQuery Core version 3.6.0 has been added.

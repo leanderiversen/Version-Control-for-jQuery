@@ -4,7 +4,7 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Version Control for jQuery\n"
 "POT-Creation-Date: 2016-11-20 21:21+0000\n"
-"PO-Revision-Date: 2016-09-27 11:50+0100\n"
+"PO-Revision-Date: 2022-11-13 14:34+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,22 +20,34 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: settings.php:29
-msgid "Select your desired jQuery version."
+#: settings.php:42
+msgid "Select your preferred CDN (jQuery Core only)."
 msgstr ""
 
-#: settings.php:37
+#: settings.php:50
+msgid "Select your desired jQuery Core version."
+msgstr ""
+
+#: settings.php:58
 msgid "Select your desired jQuery Migrate version."
 msgstr ""
 
-#: settings.php:150
+#: settings.php:66
+msgid "Disable jQuery Core?"
+msgstr ""
+
+#: settings.php:74
+msgid "Disable jQuery Migrate?"
+msgstr ""
+
+#: settings.php:274
 msgid ""
 "Use the dropdown selectors below to select your desired version of jQuery. "
 "Please note that the plugin defaults to the latest stable version."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: settings.php:157
+#: settings.php:279
 msgid "Version Control for jQuery"
 msgstr ""
 
