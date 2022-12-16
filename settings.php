@@ -91,6 +91,7 @@ class Settings {
 		echo sprintf( '<option value="cdnjs" name="vcfj_settings[vcfj_cdn]" %s>cdnjs</option>', selected( $cdn, 'cdnjs', false ) );
 		echo sprintf( '<option value="google" name="vcfj_settings[vcfj_cdn]" %s>Google</option>', selected( $cdn, 'google', false ) );
 		echo sprintf( '<option value="jquery" name="vcfj_settings[vcfj_cdn]" %s>jQuery</option>', selected( $cdn, 'jquery', false ) );
+		echo sprintf( '<option value="jsdelivr" name="vcfj_settings[vcfj_cdn]" %s>jsDelivr</option>', selected( $cdn, 'jsdelivr', false ) );
 		echo '</select>';
 	}
 
@@ -106,6 +107,7 @@ class Settings {
 
 		$versions = [
 			'git-build' => '(Git Build)',
+			'3.6.2' => '3.6.2',
 			'3.6.1' => '3.6.1',
 			'3.6.0' => '3.6.0',
 			'3.5.1' => '3.5.1',
@@ -288,11 +290,6 @@ class Settings {
 	<?php }
 
 	public function register_core_version(): void {
-		// Check that the user is not viewing the administration panel
-		if ( is_admin() ) {
-			return;
-		}
-
 		// Deregister the standard jQuery Core
 		wp_deregister_script( 'jquery' );
 
@@ -354,15 +351,12 @@ class Settings {
 			wp_register_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/' . $version . '/jquery.min.js', false, $version );
 		} elseif( 'google' === $cdn ) {
 			wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/' . $version . '/jquery.min.js', false, $version );
+		} elseif( 'jsdelivr' === $cdn ) {
+			wp_register_script( 'jquery', 'https://cdn.jsdelivr.net/npm/jquery@' . $version . '/dist/jquery.min.js', false, $version );
 		}
 	}
 
 	public function register_migrate_version(): void {
-		// Check that the user is not viewing the administration panel
-		if( is_admin() ) {
-			return;
-		}
-
 		// Deregister core jQuery Migrate
 		wp_deregister_script( 'jquery-migrate' );
 
