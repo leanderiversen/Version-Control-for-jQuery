@@ -3,7 +3,7 @@ Contributors: leanderiversen
 Tags: jquery, core, migrate, javascript, update, control, version, disable
 Requires at least: 5.0
 Tested up to: 6.1.1
-Stable tag: 3.0.3
+Stable tag: 3.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -25,6 +25,10 @@ If you like the plugin, please review it! Every review is highly appreciated, bu
 
 
 == Changelog ==
+= 3.1 =
+* Added jsDelivr to the list of preferred CDNs. If the selected version is not hosted by this provider, it will default to the jQuery CDN.
+* Added jQuery Core version 3.6.2.
+
 = 3.0.3 =
 * Fixed a bug that could cause the wrong version of jQuery Migrate to appear as the selected version on the settings page.
 
