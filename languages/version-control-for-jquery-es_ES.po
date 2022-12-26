@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Version Control for jQuery\n"
-"POT-Creation-Date: 2022-12-26 14:55+0000\n"
-"PO-Revision-Date: 2022-12-26 14:55+0000\n"
+"POT-Creation-Date: 2022-12-26 14:54+0000\n"
+"PO-Revision-Date: 2022-12-26 15:11+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: nb_NO\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,32 +22,32 @@ msgstr ""
 
 #: settings.php:44
 msgid "Select your preferred CDN (jQuery Core only)."
-msgstr "Velg din foretrekkende CDN (kun jQuery Core)."
+msgstr "Seleccione su CDN preferido (solo jQuery Core)."
 
 #: settings.php:52
 msgid "Select your desired jQuery Core version."
-msgstr "Velg din ønskede versjon av jQuery Core."
+msgstr "Seleccione la versión de jQuery Core que desee."
 
 #: settings.php:60
 msgid "Select your desired jQuery Migrate version."
-msgstr "Velg din ønskede versjon av jQuery Migrate."
+msgstr "Seleccione la versión de jQuery Migrate que desee."
 
 #: settings.php:68
 msgid "Disable jQuery Core?"
-msgstr "Deaktiver jQuery Core?"
+msgstr "Deshabilitar jQuery Core?"
 
 #: settings.php:76
 msgid "Disable jQuery Migrate?"
-msgstr "Deaktiver jQuery Migrate?"
+msgstr "Deshabilitar jQuery Migrate?"
 
 #: settings.php:278
 msgid ""
 "Use the dropdown selectors below to select your desired version of jQuery. "
 "Please note that the plugin defaults to the latest stable version."
 msgstr ""
-"Bruk nedtrekklistene under for å velge ønsket versjon av jQuery. Vær "
-"oppmerksom på at utvidelsen vil som standard velge den nyeste stabile "
-"versjonen."
+"Utilice los selectores desplegables a continuación para seleccionar la "
+"versión deseada de jQuery. Tenga en cuenta que el complemento tiene por "
+"defecto la última versión estable."
 
 #. Plugin Name of the plugin/theme
 #: settings.php:283
@@ -63,8 +63,8 @@ msgid ""
 "Version Control for jQuery is the easiest way to control the version of "
 "jQuery used on your website."
 msgstr ""
-"Version Control for jQuery er den enkleste måten å kontrollere hvilken "
-"versjon av jQuery som brukes på nettsiden din."
+"Version Control for jQuery es la forma más fácil de controlar la versión "
+"de jQuery utilizada en su sitio web."
 
 #. Author of the plugin/theme
 msgid "Leander Iversen"
@@ -73,6 +73,3 @@ msgstr "Leander Iversen"
 #. Author URI of the plugin/theme
 msgid "https://github.com/leanderiversen/"
 msgstr "https://github.com/leanderiversen/"
-
-#~ msgid "Iversen - Carpe Noctem"
-#~ msgstr "Iversen - Carpe Noctem"

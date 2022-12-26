@@ -5,13 +5,13 @@ Version Control for jQuery is one of the easiest ways to control the version of 
 - Tags: jquery, core, migrate, javascript, update, control, version
 - Requires at least: 5.0
 - Tested up to: 6.1.1
-- Stable tag: 3.1
+- Stable tag: 3.1.1
 - Requires PHP: 7.4
 - License: GPLv2 or later
 - License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
-Version Control for jQuery is one of the easiest ways to control the version of jQuery used on your website. Whether you just want to run a stable WordPress website, or if you are a developer and want to validate compatibility on your website with the various version of jQuery, the plugin will always have the latest minified version of jQuery ready for you. By default, the files will be loaded from the fast jQuery CDN, but you will also have the option to choose cdnjs or Google CDN.
+Version Control for jQuery is one of the easiest ways to control the version of jQuery used on your website. Whether you just want to run a stable WordPress website, or if you are a developer and want to validate compatibility on your website with the various version of jQuery, the plugin will always have the latest minified version of jQuery ready for you. By default, the files will be loaded from the fast jQuery CDN, but you will also have the option to choose cdnjs, Google CDN or jsDelivr.
 
 Please notice that no files are replaced, therefore deactivation of this plugin returns your site to its original state.
 
@@ -21,6 +21,9 @@ Please notice that no files are replaced, therefore deactivation of this plugin 
 3. Sit back and enjoy, or select your desired version of jQuery
 
 ## Changelog
+### 3.2
+* Added CDN support for jQuery Migrate, meaning that it will be loaded from your preferred CDN if the selected version is hosted.
+
 ### 3.1
 * Added jsDelivr to the list of preferred CDNs. If the selected version is not hosted by this provider, it will default to the jQuery CDN.
 * Added jQuery Core version 3.6.2.
