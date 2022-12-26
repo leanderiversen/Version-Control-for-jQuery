@@ -19,7 +19,7 @@ Please notice that no files are replaced, therefore deactivation of this plugin 
 If you like the plugin, please review it! Every review is highly appreciated, but if you want to suggest something, please send an email to info@carpe-noctem.no.
 
 == Installation ==
-1. Upload `version-control-for-jquery/` to the `/wp-content/plugins/` directory
+1. Upload `version-control-for-jquery` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Sit back and enjoy, or select your desired version of jQuery
 
