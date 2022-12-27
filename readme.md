@@ -7,8 +7,8 @@ Version Control for jQuery is one of the easiest ways to control the version of 
 - Tested up to: 6.1.1
 - Stable tag: 3.2
 - Requires PHP: 7.4
-- License: GPLv2 or later
-- License URI: https://www.gnu.org/licenses/gpl-2.0.html
+- License: GPLv3
+- License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 ## Description
 Version Control for jQuery is one of the easiest ways to control the version of [jQuery](https://jquery.com/) used on your website. Whether you just want to run a stable WordPress website, or if you are a developer and want to validate compatibility on your website with the various version of jQuery, the plugin will always have the latest minified version of jQuery ready for you. By default, the files will be loaded from the fast [jQuery CDN](https://releases.jquery.com/), but you will also have the option to choose [cdnjs](https://cdnjs.com/), [Google CDN](https://developers.google.com/speed/libraries) or [jsDelivr](https://www.jsdelivr.com/).
