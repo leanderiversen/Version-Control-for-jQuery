@@ -3,7 +3,7 @@
  * Plugin Name: Version Control for jQuery
  * Plugin URI: https://github.com/leanderiversen/version-control-for-jquery/
  * Description: Version Control for jQuery is the easiest way to control the version of jQuery used on your website.
- * Version: 3.2
+ * Version: 3.3-alpha
  * Author: Leander Iversen
  * Author URI: https://github.com/leanderiversen/
  * License: GPLv2 or later
@@ -38,9 +38,11 @@ function vcfj_load_textdomain() {
 }
 add_action( 'plugins_loaded', 'vcfj_load_textdomain' );
 
-// Require the settings page
-function vcfj_require_settings() {
-	require_once( plugin_dir_path( __FILE__ ) . 'mappings.php' );
-	require_once( plugin_dir_path( __FILE__ ) . 'settings.php' );
+// Require the plugin files
+function vcfj_require_files() {
+	require_once( plugin_dir_path( __FILE__ ) . 'src/class-helpers.php' );
+	require_once( plugin_dir_path( __FILE__ ) . 'src/class-mappings.php' );
+	require_once( plugin_dir_path( __FILE__ ) . 'src/class-settings.php' );
+	require_once( plugin_dir_path( __FILE__ ) . 'src/class-enqueue.php' );
 }
-add_action( 'plugins_loaded', 'vcfj_require_settings' );
+add_action( 'plugins_loaded', 'vcfj_require_files' );
