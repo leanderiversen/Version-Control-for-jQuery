@@ -25,6 +25,9 @@ If you like the plugin, please review it! Every review is highly appreciated, bu
 
 
 == Changelog ==
+= 3.3 =
+* Added jQuery Core version 3.6.3.
+
 = 3.2 =
 * Added CDN support for jQuery Migrate, meaning that it will be loaded from your preferred CDN if the selected version is hosted.
 
