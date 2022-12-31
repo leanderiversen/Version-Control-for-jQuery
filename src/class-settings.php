@@ -2,7 +2,7 @@
 
 namespace ICN\VCFJ;
 
-// Block direct access
+// Block direct access.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -93,7 +93,7 @@ class Settings {
 
 		echo '<select name="vcfj_settings[vcfj_cdn]">';
 		foreach ( $cdns as $value => $label ) {
-			echo sprintf( '<option value="%1$s" %2$s>%3$s</option>', $value, selected( $cdn, $value, false ), $label );
+			echo sprintf( '<option value="%1$s" %2$s>%3$s</option>', esc_attr( $value ), selected( $cdn, $value, false ), esc_html( $label ) );
 		}
 		echo '</select>';
 	}
@@ -103,6 +103,7 @@ class Settings {
 
 		$versions = array(
 			'git-build' => '(Git Build)',
+			'3.6.3' => '3.6.3',
 			'3.6.2' => '3.6.2',
 			'3.6.1' => '3.6.1',
 			'3.6.0' => '3.6.0',
@@ -210,26 +211,26 @@ class Settings {
 		$name    = sprintf( 'vcfj_%s_disable', $args['option'] );
 		$checked = Helpers::is_disabled( $args['option'] ) ? 'checked="checked"' : '';
 
-		echo sprintf( '<input type="checkbox" name="vcfj_settings[%1$s]" value="1" %2$s />', $name, $checked );
+		echo sprintf( '<input type="checkbox" name="vcfj_settings[%1$s]" value="1" %2$s />', esc_attr( $name ), esc_attr( $checked ) );
 	}
 
 	private function output_select( string $type, string $current, array $versions ): void {
 		$select_name = sprintf( 'vcfj_%s_version', $type );
 
-		echo sprintf( '<select name="vcfj_settings[%s]">', $select_name );
+		echo sprintf( '<select name="vcfj_settings[%s]">', esc_attr( $select_name ) );
 		foreach ( $versions as $version => $label ) {
-			echo sprintf( '<option value="%1$s" %2$s>jQuery %3$s %4$s</option>', $version, selected( $current, $version, false ), ucfirst( $type ), $label );
+			echo sprintf( '<option value="%1$s" %2$s>jQuery %3$s %4$s</option>', esc_attr( $version ), selected( $current, $version, false ), esc_attr( ucfirst( $type ) ), esc_html( $label ) );
 		}
 		echo '</select>';
 	}
 
 	public function section_callback(): void {
-		echo '<p>' . __( 'Use the dropdown selectors below to select your desired version of jQuery. Please note that the plugin defaults to the latest stable version.', 'version-control-for-jquery' ) . '</p>';
+		echo '<p>' . esc_html__( 'Use the dropdown selectors below to select your desired version of jQuery. Please note that the plugin defaults to the latest stable version.', 'version-control-for-jquery' ) . '</p>';
 	}
 
 	public function render_page(): void { ?>
 		<div class="wrap">
-			<h1><?php _e( 'Version Control for jQuery', 'version-control-for-jquery' ); ?></h1>
+			<h1><?php esc_html_e( 'Version Control for jQuery', 'version-control-for-jquery' ); ?></h1>
 			<form action="options.php" method="post">
 				<?php
 				settings_fields( 'vcfj_settings_page' );

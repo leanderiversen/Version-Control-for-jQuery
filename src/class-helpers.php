@@ -2,7 +2,7 @@
 
 namespace ICN\VCFJ;
 
-// Block direct access
+// Block direct access.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }

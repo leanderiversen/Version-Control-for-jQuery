@@ -2,7 +2,7 @@
 
 namespace ICN\VCFJ;
 
-// Block direct access
+// Block direct access.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -25,10 +25,8 @@ class Enqueue {
 	}
 
 	public function register_core_version(): void {
-		// Deregister the standard jQuery Core
 		wp_deregister_script( 'jquery' );
 
-		// Check if jQuery Core has been disabled
 		if ( Helpers::is_disabled( 'core' ) ) {
 			return;
 		}
@@ -36,7 +34,7 @@ class Enqueue {
 		$version = Helpers::get_version( 'core' );
 
 		if ( 'git-build' === $version ) {
-			wp_register_script( 'jquery', 'https://code.jquery.com/jquery-git.min.js', false, $version );
+			wp_register_script( 'jquery', 'https://code.jquery.com/jquery-git.min.js', false, $version, false );
 			return;
 		}
 
@@ -78,14 +76,12 @@ class Enqueue {
 			$url = sprintf( 'https://cdn.jsdelivr.net/npm/jquery@%s/dist/jquery.min.js', $version );
 		}
 
-		wp_register_script( 'jquery', $url, false, $version );
+		wp_register_script( 'jquery', $url, false, $version, false );
 	}
 
 	public function register_migrate_version(): void {
-		// Deregister the standard jQuery Migrate
 		wp_deregister_script( 'jquery-migrate' );
 
-		// Check if jQuery Migrate has been disabled
 		if ( Helpers::is_disabled( 'migrate' ) ) {
 			return;
 		}
@@ -93,7 +89,7 @@ class Enqueue {
 		$version = Helpers::get_version( 'migrate' );
 
 		if ( 'git-build' === $version ) {
-			wp_enqueue_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-git.min.js', array( 'jquery' ), $version );
+			wp_enqueue_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-git.min.js', array( 'jquery' ), $version, false );
 			return;
 		}
 
@@ -113,7 +109,7 @@ class Enqueue {
 			$url = sprintf( 'https://cdn.jsdelivr.net/npm/jquery-migrate@%s/dist/jquery-migrate.min.js', $version );
 		}
 
-		wp_enqueue_script( 'jquery-migrate', $url, array( 'jquery' ), $version );
+		wp_enqueue_script( 'jquery-migrate', $url, array( 'jquery' ), $version, false );
 	}
 
 }

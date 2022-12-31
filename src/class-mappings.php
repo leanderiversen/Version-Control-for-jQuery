@@ -2,7 +2,7 @@
 
 namespace ICN\VCFJ;
 
-// Block direct access
+// Block direct access.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -11,6 +11,7 @@ class Mappings {
 
 	public static $core = array(
 		'cdnjs' => array(
+			'3.6.3',
 			'3.6.2',
 			'3.6.1',
 			'3.6.0',
@@ -144,6 +145,7 @@ class Mappings {
 			'1.2.3',
 		),
 		'jquery' => array(
+			'3.6.3',
 			'3.6.2',
 			'3.6.1',
 			'3.6.0',
@@ -218,6 +220,7 @@ class Mappings {
 			'1.2',
 		),
 		'jsdelivr' => array(
+			'3.6.3',
 			'3.6.2',
 			'3.6.0',
 			'3.5.1',
