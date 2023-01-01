@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Version Control for jQuery\n"
 "POT-Creation-Date: 2023-01-01 16:48+0000\n"
-"PO-Revision-Date: 2023-01-01 16:48+0000\n"
+"PO-Revision-Date: 2023-01-01 17:04+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -26,7 +26,7 @@ msgstr "jQuery Version Control"
 
 #: src/class-settings.php:35
 msgid "Select your preferred CDN (jQuery Core only)."
-msgstr "Select your preferred CDN (jQuery Core only)."
+msgstr "Sélectionnez votre CDN préféré (jQuery Core uniquement)."
 
 #: src/class-settings.php:43
 msgid "Select your desired jQuery Core version."

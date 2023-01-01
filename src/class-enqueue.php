@@ -33,7 +33,7 @@ class Enqueue {
 		$cdn = Helpers::get_cdn();
 
 		if ( ! array_key_exists( $cdn, Mappings::$core ) ) {
-			$cdn = VCFJ_DEFAULT_CDN;
+			$cdn = Plugin::DEFAULT_CDN;
 		}
 
 		if ( 'cdnjs' === $cdn ) {
@@ -88,7 +88,7 @@ class Enqueue {
 		$cdn = Helpers::get_cdn();
 
 		if ( ! array_key_exists( $cdn, Mappings::$migrate ) ) {
-			$cdn = VCFJ_DEFAULT_CDN;
+			$cdn = Plugin::DEFAULT_CDN;
 		}
 
 		$has_version = in_array( $version, Mappings::$migrate[ $cdn ], true );
