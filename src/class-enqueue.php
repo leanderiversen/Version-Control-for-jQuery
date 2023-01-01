@@ -9,19 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Enqueue {
 
-	private static $instance = null;
+	use Traits\Initialise;
 
 	public function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_core_version' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_migrate_version' ) );
-	}
-
-	public static function instance() {
-		if ( is_null( self::$instance ) ) {
-			self::$instance = new self();
-		}
-
-		return self::$instance;
 	}
 
 	public function register_core_version(): void {
@@ -114,4 +106,4 @@ class Enqueue {
 
 }
 
-Enqueue::instance();
+Enqueue::initialise();

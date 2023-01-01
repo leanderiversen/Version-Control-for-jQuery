@@ -9,23 +9,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Settings {
 
-	private static $instance = null;
+	use Traits\Initialise;
 
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'add_admin_menu' ) );
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
 	}
 
-	public static function instance() {
-		if ( is_null( self::$instance ) ) {
-			self::$instance = new self();
-		}
-
-		return self::$instance;
-	}
-
 	public function add_admin_menu(): void {
-		add_options_page( 'jQuery Version Control', 'jQuery Version Control', 'manage_options', 'version_control_for_jquery', array( $this, 'render_page' ) );
+		add_options_page( 'jQuery Version Control', __( 'jQuery Version Control', 'version-control-for-jquery' ), 'manage_options', 'version_control_for_jquery', array( $this, 'render_page' ) );
 	}
 
 	public function register_settings(): void {
@@ -244,4 +236,4 @@ class Settings {
 
 }
 
-Settings::instance();
+Settings::initialise();

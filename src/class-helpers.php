@@ -18,15 +18,14 @@ class Helpers {
 
 	public static function get_version( string $option ): string {
 		$options = get_option( 'vcfj_settings' );
-		$option  = sprintf( 'vcfj_%s_version', $option );
 
-		return ! isset( $options[ $option ] ) || empty( $options[ $option ] ) ? constant( 'VCFJ_LATEST_' . strupper( $option ) ) : $options[ $option ];
+		return ! isset( $options[ $option ] ) || empty( $options[ $option ] ) ? constant( 'Plugin::DEFAULT_' . mb_strtoupper( $option ) ) : $options[ $option ];
 	}
 
 	public static function get_cdn(): string {
 		$options = get_option( 'vcfj_settings' );
 
-		return ! isset( $options['vcfj_cdn'] ) || empty( $options['vcfj_cdn'] ) ? constant( 'VCFJ_DEFAULT_CDN' ) : $options['vcfj_cdn'];
+		return ! isset( $options['vcfj_cdn'] ) || empty( $options['vcfj_cdn'] ) ? Plugin::DEFAULT_CDN : $options['vcfj_cdn'];
 	}
 
 }

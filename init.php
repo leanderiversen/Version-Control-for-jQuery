@@ -17,32 +17,44 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Define the latest version of jQuery Core.
-if ( ! defined( 'VCFJ_LATEST_CORE' ) ) {
-	define( 'VCFJ_LATEST_CORE', '3.6.3' );
+class Plugin {
+
+	// Define the default version of jQuery Core.
+	public const DEFAULT_CORE = '3.6.3';
+
+	// Define the default version of jQuery Migrate.
+	public const DEFAULT_MIGRATE = '3.4.0';
+
+	// Define the default CDN.
+	public const DEFAULT_CDN = 'jquery';
+
+	private static $instance = null;
+
+	public static function initialise() {
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+	}
+
+	public function __construct() {
+		add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
+		add_action( 'plugins_loaded', array( $this, 'require_files' ) );
+	}
+
+	public function load_textdomain(): void {
+		load_plugin_textdomain( 'version-control-for-jquery', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	}
+
+	public function require_files(): void {
+		require_once plugin_dir_path( __FILE__ ) . 'src/traits/trait-initialise.php';
+		require_once plugin_dir_path( __FILE__ ) . 'src/class-helpers.php';
+		require_once plugin_dir_path( __FILE__ ) . 'src/class-mappings.php';
+		require_once plugin_dir_path( __FILE__ ) . 'src/class-settings.php';
+		require_once plugin_dir_path( __FILE__ ) . 'src/class-enqueue.php';
+	}
+
 }
 
-// Define the latest version of jQuery Migrate.
-if ( ! defined( 'VCFJ_LATEST_MIGRATE' ) ) {
-	define( 'VCFJ_LATEST_MIGRATE', '3.4.0' );
-}
-
-// Define the default CDN.
-if ( ! defined( 'VCFJ_DEFAULT_CDN' ) ) {
-	define( 'VCFJ_DEFAULT_CDN', 'jquery' );
-}
-
-// Load translations.
-function vcfj_load_textdomain() {
-	load_plugin_textdomain( 'version-control-for-jquery', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
-add_action( 'plugins_loaded', 'vcfj_load_textdomain' );
-
-// Require the plugin files.
-function vcfj_require_files() {
-	require_once plugin_dir_path( __FILE__ ) . 'src/class-helpers.php';
-	require_once plugin_dir_path( __FILE__ ) . 'src/class-mappings.php';
-	require_once plugin_dir_path( __FILE__ ) . 'src/class-settings.php';
-	require_once plugin_dir_path( __FILE__ ) . 'src/class-enqueue.php';
-}
-add_action( 'plugins_loaded', 'vcfj_require_files' );
+Plugin::initialise();
