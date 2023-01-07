@@ -5,7 +5,7 @@ Version Control for jQuery is one of the easiest ways to control the version of 
 - Tags: jquery, core, migrate, javascript, update, control, version
 - Requires at least: 5.0
 - Tested up to: 6.1.1
-- Stable tag: 3.3
+- Stable tag: 3.3.1
 - Requires PHP: 7.4
 - License: GPLv3
 - License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -21,6 +21,9 @@ Please notice that no files are replaced, therefore deactivation of this plugin 
 3. Sit back and enjoy, or select your desired version of jQuery
 
 ## Changelog
+### 3.3.1
+* Fixed a bug that could cause a fatal error when viewing the settings page.
+
 ### 3.3
 * Added jQuery Core version 3.6.3.
 
