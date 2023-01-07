@@ -19,7 +19,7 @@ class Helpers {
 	public static function get_version( string $option ): string {
 		$options = get_option( 'vcfj_settings' );
 
-		return ! isset( $options[ $option ] ) || empty( $options[ $option ] ) ? constant( 'Plugin::DEFAULT_' . mb_strtoupper( $option ) ) : $options[ $option ];
+		return ! isset( $options[ $option ] ) || empty( $options[ $option ] ) ? constant( '\ICN\VCFJ\Plugin::DEFAULT_' . mb_strtoupper( $option ) ) : $options[ $option ];
 	}
 
 	public static function get_cdn(): string {
