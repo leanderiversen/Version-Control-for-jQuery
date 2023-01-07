@@ -2,13 +2,16 @@
 
 namespace ICN\VCFJ;
 
-// Block direct access
-if(!defined('ABSPATH'))exit;
+// Block direct access.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 class Mappings {
 
-	public static $core = [
-		'cdnjs' => [
+	public static $core = array(
+		'cdnjs' => array(
+			'3.6.3',
 			'3.6.2',
 			'3.6.1',
 			'3.6.0',
@@ -73,9 +76,9 @@ class Mappings {
 			'1.3.1',
 			'1.3.0',
 			'1.2.6',
-			'1.2.3'
-		],
-		'google' => [
+			'1.2.3',
+		),
+		'google' => array(
 			'3.6.1',
 			'3.6.0',
 			'3.5.1',
@@ -139,9 +142,10 @@ class Mappings {
 			'1.3.1',
 			'1.3.0',
 			'1.2.6',
-			'1.2.3'
-		],
-		'jquery' => [
+			'1.2.3',
+		),
+		'jquery' => array(
+			'3.6.3',
 			'3.6.2',
 			'3.6.1',
 			'3.6.0',
@@ -213,9 +217,10 @@ class Mappings {
 			'1.2.3',
 			'1.2.2',
 			'1.2.1',
-			'1.2'
-		],
-		'jsdelivr' => [
+			'1.2',
+		),
+		'jsdelivr' => array(
+			'3.6.3',
 			'3.6.2',
 			'3.6.0',
 			'3.5.1',
@@ -255,12 +260,12 @@ class Mappings {
 			'1.7.2',
 			'1.6.3',
 			'1.6.2',
-			'1.5.1'
-		]
-	];
+			'1.5.1',
+		),
+	);
 
-	public static $migrate = [
-		'cdnjs' => [
+	public static $migrate = array(
+		'cdnjs' => array(
 			'3.4.0',
 			'3.3.2',
 			'3.3.0',
@@ -275,9 +280,9 @@ class Mappings {
 			'1.2.0',
 			'1.1.1',
 			'1.1.0',
-			'1.0.0'
-		],
-		'jquery' => [
+			'1.0.0',
+		),
+		'jquery' => array(
 			'3.4.0',
 			'3.3.2',
 			'3.3.1',
@@ -293,9 +298,9 @@ class Mappings {
 			'1.2.0',
 			'1.1.1',
 			'1.1.0',
-			'1.0.0'
-		],
-		'jsdelivr' => [
+			'1.0.0',
+		),
+		'jsdelivr' => array(
 			'3.4.0',
 			'3.3.2',
 			'3.3.1',
@@ -307,8 +312,8 @@ class Mappings {
 			'1.4.1',
 			'1.4.0',
 			'1.3.0',
-			'1.2.1'
-		]
-	];
+			'1.2.1',
+		),
+	);
 
 }

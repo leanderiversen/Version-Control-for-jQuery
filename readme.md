@@ -5,22 +5,25 @@ Version Control for jQuery is one of the easiest ways to control the version of 
 - Tags: jquery, core, migrate, javascript, update, control, version
 - Requires at least: 5.0
 - Tested up to: 6.1.1
-- Stable tag: 3.1.1
+- Stable tag: 3.3
 - Requires PHP: 7.4
-- License: GPLv2 or later
-- License URI: https://www.gnu.org/licenses/gpl-2.0.html
+- License: GPLv3
+- License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 ## Description
-Version Control for jQuery is one of the easiest ways to control the version of jQuery used on your website. Whether you just want to run a stable WordPress website, or if you are a developer and want to validate compatibility on your website with the various version of jQuery, the plugin will always have the latest minified version of jQuery ready for you. By default, the files will be loaded from the fast jQuery CDN, but you will also have the option to choose cdnjs, Google CDN or jsDelivr.
+Version Control for jQuery is one of the easiest ways to control the version of [jQuery](https://jquery.com/) used on your website. Whether you just want to run a stable WordPress website, or if you are a developer and want to validate compatibility on your website with the various version of jQuery, the plugin will always have the latest minified version of jQuery ready for you. By default, the files will be loaded from the fast [jQuery CDN](https://releases.jquery.com/), but you will also have the option to choose [cdnjs](https://cdnjs.com/), [Google CDN](https://developers.google.com/speed/libraries) or [jsDelivr](https://www.jsdelivr.com/).
 
 Please notice that no files are replaced, therefore deactivation of this plugin returns your site to its original state.
 
 ## Installation
-1. Upload `version-control-for-jquery/` to the `/wp-content/plugins/` directory
+1. Upload `version-control-for-jquery` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Sit back and enjoy, or select your desired version of jQuery
 
 ## Changelog
+### 3.3
+* Added jQuery Core version 3.6.3.
+
 ### 3.2
 * Added CDN support for jQuery Migrate, meaning that it will be loaded from your preferred CDN if the selected version is hosted.
 

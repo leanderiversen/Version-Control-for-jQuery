@@ -1,9 +1,9 @@
 <?php
-/*
+/**
  * Plugin Name: Version Control for jQuery
  * Plugin URI: https://github.com/leanderiversen/version-control-for-jquery/
  * Description: Version Control for jQuery is the easiest way to control the version of jQuery used on your website.
- * Version: 3.2
+ * Version: 3.3
  * Author: Leander Iversen
  * Author URI: https://github.com/leanderiversen/
  * License: GPLv2 or later
@@ -12,35 +12,49 @@
  * Domain Path: /languages
  */
 
-// Block direct access
+// Block direct access.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Define the latest version of jQuery Core
-if ( ! defined( 'VCFJ_LATEST_CORE' ) ) {
-	define( 'VCFJ_LATEST_CORE', '3.6.2' );
+class Plugin {
+
+	// Define the default version of jQuery Core.
+	public const DEFAULT_CORE = '3.6.3';
+
+	// Define the default version of jQuery Migrate.
+	public const DEFAULT_MIGRATE = '3.4.0';
+
+	// Define the default CDN.
+	public const DEFAULT_CDN = 'jquery';
+
+	private static $instance = null;
+
+	public static function initialise() {
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+	}
+
+	public function __construct() {
+		add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
+		add_action( 'plugins_loaded', array( $this, 'require_files' ) );
+	}
+
+	public function load_textdomain(): void {
+		load_plugin_textdomain( 'version-control-for-jquery', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	}
+
+	public function require_files(): void {
+		require_once plugin_dir_path( __FILE__ ) . 'src/traits/trait-initialise.php';
+		require_once plugin_dir_path( __FILE__ ) . 'src/class-helpers.php';
+		require_once plugin_dir_path( __FILE__ ) . 'src/class-mappings.php';
+		require_once plugin_dir_path( __FILE__ ) . 'src/class-settings.php';
+		require_once plugin_dir_path( __FILE__ ) . 'src/class-enqueue.php';
+	}
+
 }
 
-// Define the latest version of jQuery Migrate
-if ( ! defined( 'VCFJ_LATEST_MIGRATE' ) ) {
-	define( 'VCFJ_LATEST_MIGRATE', '3.4.0' );
-}
-
-// Define the default CDN
-if ( ! defined( 'VCFJ_DEFAULT_CDN' ) ) {
-	define( 'VCFJ_DEFAULT_CDN', 'jquery' );
-}
-
-// Load translation
-function vcfj_load_textdomain() {
-	load_plugin_textdomain( 'version-control-for-jquery', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
-add_action( 'plugins_loaded', 'vcfj_load_textdomain' );
-
-// Require the settings page
-function vcfj_require_settings() {
-	require_once( plugin_dir_path( __FILE__ ) . 'mappings.php' );
-	require_once( plugin_dir_path( __FILE__ ) . 'settings.php' );
-}
-add_action( 'plugins_loaded', 'vcfj_require_settings' );
+Plugin::initialise();
