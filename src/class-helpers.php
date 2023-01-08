@@ -18,6 +18,7 @@ class Helpers {
 
 	public static function get_version( string $option ): string {
 		$options = get_option( 'vcfj_settings' );
+		$option  = sprintf( 'vcfj_%s_version', $option );
 
 		return ! isset( $options[ $option ] ) || empty( $options[ $option ] ) ? constant( '\ICN\VCFJ\Plugin::DEFAULT_' . mb_strtoupper( $option ) ) : $options[ $option ];
 	}
