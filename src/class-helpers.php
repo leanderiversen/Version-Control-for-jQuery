@@ -17,10 +17,10 @@ class Helpers {
 	}
 
 	public static function get_version( string $option ): string {
-		$options = get_option( 'vcfj_settings' );
-		$option  = sprintf( 'vcfj_%s_version', $option );
+		$options     = get_option( 'vcfj_settings' );
+		$option_name = sprintf( 'vcfj_%s_version', $option );
 
-		return ! isset( $options[ $option ] ) || empty( $options[ $option ] ) ? constant( '\ICN\VCFJ\Plugin::DEFAULT_' . mb_strtoupper( $option ) ) : $options[ $option ];
+		return ! isset( $options[ $option_name ] ) || empty( $options[ $option_name ] ) ? constant( '\ICN\VCFJ\Plugin::DEFAULT_' . mb_strtoupper( $option ) ) : $options[ $option_name ];
 	}
 
 	public static function get_cdn(): string {
