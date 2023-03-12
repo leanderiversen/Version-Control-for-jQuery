@@ -3,7 +3,7 @@
  * Plugin Name: Version Control for jQuery
  * Plugin URI: https://github.com/leanderiversen/version-control-for-jquery/
  * Description: Version Control for jQuery is the easiest way to control the version of jQuery used on your website.
- * Version: 3.3.4
+ * Version: 3.4
  * Author: Leander Iversen
  * Author URI: https://github.com/leanderiversen/
  * License: GPLv2 or later
@@ -22,10 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Plugin {
 
 	// Define the default version of jQuery Core.
-	public const DEFAULT_CORE = '3.6.3';
+	public const DEFAULT_CORE = '3.6.4';
 
 	// Define the default version of jQuery Migrate.
-	public const DEFAULT_MIGRATE = '3.4.0';
+	public const DEFAULT_MIGRATE = '3.4.1';
 
 	// Define the default CDN.
 	public const DEFAULT_CDN = 'jquery';

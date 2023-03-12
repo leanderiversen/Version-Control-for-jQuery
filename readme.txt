@@ -3,7 +3,7 @@ Contributors: leanderiversen
 Tags: jquery, core, migrate, javascript, update, control, version, disable
 Requires at least: 5.0
 Tested up to: 6.1.1
-Stable tag: 3.3.4
+Stable tag: 3.4
 Requires PHP: 7.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -16,7 +16,7 @@ Version Control for jQuery is one of the easiest ways to control the version of 
 Please notice that no files are replaced, therefore deactivation of this plugin returns your site to its original state.
 
 = Like the plugin? =
-If you like the plugin, please review it! Every review is highly appreciated, but if you want to suggest something, please send an email to info@carpe-noctem.no.
+If you like the plugin, please review it! Every review is highly appreciated, but if you want to suggest something, please send an email to leander@leanderiversen.co.uk.
 
 == Installation ==
 1. Upload `version-control-for-jquery` to the `/wp-content/plugins/` directory
@@ -25,6 +25,11 @@ If you like the plugin, please review it! Every review is highly appreciated, bu
 
 
 == Changelog ==
+= 3.4 =
+* Added jQuery Core version 3.6.4.
+* Added jQuery Migrate version 3.4.1.
+* Added Google CDN support for jQuery Core versions 3.6.2 and 3.6.3.
+
 = 3.3.4 =
 * Fixed a bug that prevented the plugin from getting the default version number for jQuery Core and jQuery Migrate.
 
