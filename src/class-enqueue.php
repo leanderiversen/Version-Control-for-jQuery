@@ -58,18 +58,6 @@ class Enqueue {
 
 		$has_version = in_array( $version, Mappings::$core[ $cdn ], true );
 
-		if ( ! $has_version ) {
-			$cdn = Plugin::DEFAULT_CDN;
-		}
-
-		$url = match($cdn) {
-			'jquery' => sprintf( 'https://code.jquery.com/jquery-%s.min.js', $version ),
-			'cdnjs' => sprintf( 'https://cdnjs.cloudflare.com/ajax/libs/jquery/%s/jquery.min.js', $version ),
-			'google' => sprintf( 'https://ajax.googleapis.com/ajax/libs/jquery/%s/jquery.min.js', $version ),
-			'jsdelivr' => sprintf( 'https://cdn.jsdelivr.net/npm/jquery@%s/dist/jquery.min.js', $version ),
-			default => sprintf( 'https://code.jquery.com/jquery-%s.min.js', $version )
-		}
-
 		if ( ! $has_version || 'jquery' === $cdn ) {
 			$url = sprintf( 'https://code.jquery.com/jquery-%s.min.js', $version );
 		} elseif ( 'cdnjs' === $cdn ) {
