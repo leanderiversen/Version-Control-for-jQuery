@@ -1,6 +1,6 @@
 <?php
 
-namespace ICN\VCFJ;
+namespace LI\VCFJ;
 
 // Block direct access.
 if ( ! defined( 'ABSPATH' ) ) {
