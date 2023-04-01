@@ -2,7 +2,7 @@
 Contributors: leanderiversen
 Tags: jquery, core, migrate, javascript, update, control, version, disable
 Requires at least: 5.0
-Tested up to: 6.1.1
+Tested up to: 6.2
 Stable tag: 3.4
 Requires PHP: 7.4
 License: GPLv3
