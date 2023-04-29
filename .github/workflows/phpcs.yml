@@ -12,5 +12,6 @@ jobs:
         - name: Coding Standards for WordPress
           uses: 10up/wpcs-action@stable
           with:
-            paths: './src'
+            enable_warnings: true
+            paths: 'src'
             standard: 'WordPress-Core'
