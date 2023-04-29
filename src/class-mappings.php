@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Mappings {
 
 	public static $core = array(
-		'cdnjs' => array(
+		'cdnjs'    => array(
 			'3.6.4',
 			'3.6.3',
 			'3.6.2',
@@ -79,7 +79,7 @@ class Mappings {
 			'1.2.6',
 			'1.2.3',
 		),
-		'google' => array(
+		'google'   => array(
 			'3.6.3',
 			'3.6.2',
 			'3.6.1',
@@ -147,7 +147,7 @@ class Mappings {
 			'1.2.6',
 			'1.2.3',
 		),
-		'jquery' => array(
+		'jquery'   => array(
 			'3.6.4',
 			'3.6.3',
 			'3.6.2',
@@ -270,7 +270,7 @@ class Mappings {
 	);
 
 	public static $migrate = array(
-		'cdnjs' => array(
+		'cdnjs'    => array(
 			'3.4.1',
 			'3.4.0',
 			'3.3.2',
@@ -288,7 +288,7 @@ class Mappings {
 			'1.1.0',
 			'1.0.0',
 		),
-		'jquery' => array(
+		'jquery'   => array(
 			'3.4.1',
 			'3.4.0',
 			'3.3.2',
