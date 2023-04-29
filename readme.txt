@@ -25,6 +25,9 @@ If you like the plugin, please review it! Every review is highly appreciated, bu
 
 
 == Changelog ==
+= 3.5 =
+* Added Google CDN support for jQuery Core versions 3.6.4.
+
 = 3.4 =
 * Added jQuery Core version 3.6.4.
 * Added jQuery Migrate version 3.4.1.
