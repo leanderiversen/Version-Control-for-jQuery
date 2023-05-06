@@ -1,6 +1,6 @@
 <?php
 
-namespace ICN\VCFJ\Traits;
+namespace LI\VCFJ\Traits;
 
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {

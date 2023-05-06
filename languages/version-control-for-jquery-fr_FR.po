@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Version Control for jQuery\n"
-"POT-Creation-Date: 2023-01-01 16:48+0000\n"
-"PO-Revision-Date: 2023-01-01 17:04+0000\n"
+"POT-Creation-Date: 2023-05-01 14:15+0100\n"
+"PO-Revision-Date: 2023-05-01 14:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -44,7 +44,7 @@ msgstr "Désactiver jQuery Core?"
 msgid "Disable jQuery Migrate?"
 msgstr "Désactiver jQuery Migrate?"
 
-#: src/class-settings.php:220
+#: src/class-settings.php:222
 msgid ""
 "Use the dropdown selectors below to select your desired version of jQuery. "
 "Please note that the plugin defaults to the latest stable version."
@@ -54,7 +54,7 @@ msgstr ""
 "dernière version stable."
 
 #. Plugin Name of the plugin/theme
-#: src/class-settings.php:225
+#: src/class-settings.php:227
 msgid "Version Control for jQuery"
 msgstr "Version Control for jQuery"
 

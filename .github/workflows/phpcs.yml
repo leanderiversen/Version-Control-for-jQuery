@@ -1,0 +1,17 @@
+name: WPCS
+on:
+  push:
+    branches:
+      - development
+jobs:
+  phpcs:
+      name: WPCS
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - name: Coding Standards for WordPress
+          uses: 10up/wpcs-action@stable
+          with:
+            enable_warnings: true
+            paths: 'src'
+            standard: 'WordPress-Core'
