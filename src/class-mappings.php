@@ -11,6 +11,7 @@ class Mappings {
 
 	public static $core = array(
 		'cdnjs'    => array(
+			'3.7.0',
 			'3.6.4',
 			'3.6.3',
 			'3.6.2',
@@ -80,6 +81,7 @@ class Mappings {
 			'1.2.3',
 		),
 		'google'   => array(
+			'3.7.0',
 			'3.6.4',
 			'3.6.3',
 			'3.6.2',
@@ -149,6 +151,7 @@ class Mappings {
 			'1.2.3',
 		),
 		'jquery'   => array(
+			'3.7.0',
 			'3.6.4',
 			'3.6.3',
 			'3.6.2',
@@ -225,6 +228,7 @@ class Mappings {
 			'1.2',
 		),
 		'jsdelivr' => array(
+			'3.7.0',
 			'3.6.4',
 			'3.6.3',
 			'3.6.2',
