@@ -216,7 +216,7 @@ class Settings {
 
 		echo sprintf( '<select name="vcfj_settings[%s]">', esc_attr( $select_name ) );
 		foreach ( $versions as $version => $label ) {
-			echo sprintf( '<option value="%1$s" %2$s>jQuery %3$s %4$s</option>', esc_attr( $version ), selected( $current, $version, false ), esc_attr( ucfirst( $type ) ), esc_html( $label ) );
+			echo sprintf( '<option value="%1$s" %2$s>%3$s</option>', esc_attr( $version ), selected( $current, $version, false ), esc_html( $label ) );
 		}
 		echo '</select>';
 	}

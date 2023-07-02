@@ -20,7 +20,7 @@ class Helpers {
 		$options     = get_option( 'vcfj_settings' );
 		$option_name = sprintf( 'vcfj_%s_version', $option );
 
-		return ! isset( $options[ $option_name ] ) || empty( $options[ $option_name ] ) ? constant( '\LI\VCFJ\Plugin::DEFAULT_' . mb_strtoupper( $option ) ) : $options[ $option_name ];
+		return ! isset( $options[ $option_name ] ) || empty( $options[ $option_name ] ) ? 'latest' : $options[ $option_name ];
 	}
 
 	public static function get_cdn(): string {
