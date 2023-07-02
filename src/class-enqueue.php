@@ -30,6 +30,10 @@ class Enqueue {
 			return;
 		}
 
+		if ( 'latest' === $version ) {
+			$version = Plugin::DEFAULT_CORE;
+		}
+
 		$cdn = Helpers::get_cdn();
 
 		if ( ! array_key_exists( $cdn, Mappings::$core ) ) {
@@ -83,6 +87,10 @@ class Enqueue {
 		if ( 'git-build' === $version ) {
 			wp_enqueue_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-git.min.js', array( 'jquery' ), $version, false );
 			return;
+		}
+
+		if ( 'latest' === $version ) {
+			$version = Plugin::DEFAULT_MIGRATE;
 		}
 
 		$cdn = Helpers::get_cdn();
