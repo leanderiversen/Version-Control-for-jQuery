@@ -2,7 +2,7 @@
 Contributors: leanderiversen
 Tags: jquery, core, migrate, javascript, update, control, version, disable
 Requires at least: 5.0
-Tested up to: 6.2
+Tested up to: 6.2.2
 Stable tag: 3.6
 Requires PHP: 7.4
 License: GPLv3
@@ -25,6 +25,9 @@ If you like the plugin, please review it! Every review is highly appreciated, bu
 
 
 == Changelog ==
+= 3.7 =
+* Added option to always use the latest version of jQuery Core and jQuery Migrate.
+
 = 3.6 =
 * Added jQuery Core version 3.7.0.
 

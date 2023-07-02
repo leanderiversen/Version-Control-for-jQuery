@@ -32,7 +32,7 @@ class Settings {
 
 		add_settings_field(
 			'vcfj_cdn',
-			__( 'Select your preferred CDN (jQuery Core only).', 'version-control-for-jquery' ),
+			__( 'Select your preferred CDN.', 'version-control-for-jquery' ),
 			array( $this, 'output_cdn_options' ),
 			'vcfj_settings_page',
 			'vcfj_pluginPage_section'
@@ -94,6 +94,7 @@ class Settings {
 		$version = Helpers::get_version( 'core' );
 
 		$versions = array(
+			'latest'    => esc_html__( 'Latest', 'version-control-for-jquery' ),
 			'git-build' => '(Git Build)',
 			'3.7.0'     => '3.7.0',
 			'3.6.4'     => '3.6.4',
@@ -179,6 +180,7 @@ class Settings {
 		$version = Helpers::get_version( 'migrate' );
 
 		$versions = array(
+			'latest'    => esc_html__( 'Latest', 'version-control-for-jquery' ),
 			'git-build' => '(Git Build)',
 			'3.4.1'     => '3.4.1',
 			'3.4.0'     => '3.4.0',
