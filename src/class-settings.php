@@ -17,7 +17,7 @@ class Settings {
 	}
 
 	public function add_admin_menu(): void {
-		add_options_page( 'jQuery Version Control', __( 'jQuery Version Control', 'version-control-for-jquery' ), 'manage_options', 'version_control_for_jquery', array( $this, 'render_page' ) );
+		add_options_page( 'jQuery Version Control', __( 'jQuery Version Control', Plugin::TEXT_DOMAIN ), 'manage_options', 'version_control_for_jquery', array( $this, 'render_page' ) );
 	}
 
 	public function register_settings(): void {
@@ -32,7 +32,7 @@ class Settings {
 
 		add_settings_field(
 			'vcfj_cdn',
-			__( 'Select your preferred CDN.', 'version-control-for-jquery' ),
+			__( 'Select your preferred CDN.', Plugin::TEXT_DOMAIN ),
 			array( $this, 'output_cdn_options' ),
 			'vcfj_settings_page',
 			'vcfj_pluginPage_section'
@@ -40,7 +40,7 @@ class Settings {
 
 		add_settings_field(
 			'vcfj_core_version',
-			__( 'Select your desired jQuery Core version.', 'version-control-for-jquery' ),
+			__( 'Select your desired jQuery Core version.', Plugin::TEXT_DOMAIN ),
 			array( $this, 'select_core_version' ),
 			'vcfj_settings_page',
 			'vcfj_pluginPage_section'
@@ -48,7 +48,7 @@ class Settings {
 
 		add_settings_field(
 			'vcfj_migrate_version',
-			__( 'Select your desired jQuery Migrate version.', 'version-control-for-jquery' ),
+			__( 'Select your desired jQuery Migrate version.', Plugin::TEXT_DOMAIN ),
 			array( $this, 'select_migrate_version' ),
 			'vcfj_settings_page',
 			'vcfj_pluginPage_section'
@@ -56,7 +56,7 @@ class Settings {
 
 		add_settings_field(
 			'vcfj_core_disable',
-			__( 'Disable jQuery Core?', 'version-control-for-jquery' ),
+			__( 'Disable jQuery Core?', Plugin::TEXT_DOMAIN ),
 			array( $this, 'output_disable_checkbox' ),
 			'vcfj_settings_page',
 			'vcfj_pluginPage_section',
@@ -65,7 +65,7 @@ class Settings {
 
 		add_settings_field(
 			'vcfj_migrate_disable',
-			__( 'Disable jQuery Migrate?', 'version-control-for-jquery' ),
+			__( 'Disable jQuery Migrate?', Plugin::TEXT_DOMAIN ),
 			array( $this, 'output_disable_checkbox' ),
 			'vcfj_settings_page',
 			'vcfj_pluginPage_section',
@@ -94,7 +94,7 @@ class Settings {
 		$version = Helpers::get_version( 'core' );
 
 		$versions = array(
-			'latest'    => esc_html__( 'Latest', 'version-control-for-jquery' ),
+			'latest'    => esc_html__( 'Latest', Plugin::TEXT_DOMAIN ),
 			'git-build' => '(Git Build)',
 			'3.7.0'     => '3.7.0',
 			'3.6.4'     => '3.6.4',
@@ -180,7 +180,7 @@ class Settings {
 		$version = Helpers::get_version( 'migrate' );
 
 		$versions = array(
-			'latest'    => esc_html__( 'Latest', 'version-control-for-jquery' ),
+			'latest'    => esc_html__( 'Latest', Plugin::TEXT_DOMAIN ),
 			'git-build' => '(Git Build)',
 			'3.4.1'     => '3.4.1',
 			'3.4.0'     => '3.4.0',
@@ -222,12 +222,12 @@ class Settings {
 	}
 
 	public function section_callback(): void {
-		echo '<p>' . esc_html__( 'Use the dropdown selectors below to select your desired version of jQuery. Please note that the plugin defaults to the latest stable version.', 'version-control-for-jquery' ) . '</p>';
+		echo '<p>' . esc_html__( 'Use the dropdown selectors below to select your desired version of jQuery. Please note that the plugin defaults to the latest stable version.', Plugin::TEXT_DOMAIN ) . '</p>';
 	}
 
 	public function render_page(): void { ?>
 		<div class="wrap">
-			<h1><?php esc_html_e( 'Version Control for jQuery', 'version-control-for-jquery' ); ?></h1>
+			<h1><?php esc_html_e( 'Version Control for jQuery', Plugin::TEXT_DOMAIN ); ?></h1>
 			<form action="options.php" method="post">
 				<?php
 				settings_fields( 'vcfj_settings_page' );

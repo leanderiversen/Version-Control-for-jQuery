@@ -30,6 +30,9 @@ class Plugin {
 	// Define the default CDN.
 	public const DEFAULT_CDN = 'jquery';
 
+	// Define the text domain.
+	public const TEXT_DOMAIN = 'version-control-for-jquery';
+
 	private static $instance = null;
 
 	public static function initialise() {
@@ -46,7 +49,7 @@ class Plugin {
 	}
 
 	public function load_textdomain(): void {
-		load_plugin_textdomain( 'version-control-for-jquery', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+		load_plugin_textdomain( self::TEXT_DOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 
 	public function require_files(): void {
