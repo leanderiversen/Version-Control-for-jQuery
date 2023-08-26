@@ -15,3 +15,4 @@ jobs:
             enable_warnings: true
             paths: 'src'
             standard: 'WordPress-Core'
+            repo_branch: 'main'
