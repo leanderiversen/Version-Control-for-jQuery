@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Version Control for jQuery\n"
 "POT-Creation-Date: 2023-07-02 09:47+0100\n"
-"PO-Revision-Date: 2023-07-02 09:47+0100\n"
+"PO-Revision-Date: 2023-07-02 10:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -26,7 +26,7 @@ msgstr "jQuery Version Control"
 
 #: src/class-settings.php:35
 msgid "Select your preferred CDN."
-msgstr "Seleccione su CDN preferido."
+msgstr "Selecciona tu CDN deseada."
 
 #: src/class-settings.php:43
 msgid "Select your desired jQuery Core version."
@@ -38,11 +38,11 @@ msgstr "Seleccione la versión de jQuery Migrate que desee."
 
 #: src/class-settings.php:59
 msgid "Disable jQuery Core?"
-msgstr "¿Deshabilitar jQuery Core?"
+msgstr "¿Desactivar jQuery Core?"
 
 #: src/class-settings.php:68
 msgid "Disable jQuery Migrate?"
-msgstr "¿Deshabilitar jQuery Migrate?"
+msgstr "¿Desactivar jQuery Migrate?"
 
 #: src/class-settings.php:97 src/class-settings.php:183
 msgid "Latest"
@@ -53,9 +53,9 @@ msgid ""
 "Use the dropdown selectors below to select your desired version of jQuery. "
 "Please note that the plugin defaults to the latest stable version."
 msgstr ""
-"Utilice los selectores desplegables a continuación para seleccionar la "
-"versión deseada de jQuery. Tenga en cuenta que el complemento tiene por "
-"defecto la última versión estable."
+"Usa los selectores desplegables de abajo para seleccionar tu versión "
+"deseada de jQuery. Por favor, ten en cuenta que, por defecto, el plugin "
+"activa la última versión estable."
 
 #. Plugin Name of the plugin/theme
 #: src/class-settings.php:230
@@ -71,8 +71,8 @@ msgid ""
 "Version Control for jQuery is the easiest way to control the version of "
 "jQuery used on your website."
 msgstr ""
-"Version Control for jQuery es la forma más fácil de controlar la versión de "
-"jQuery utilizada en su sitio web."
+"Version Control for jQuery es el modo más sencillo de controlar la versión "
+"de jQuery usada en tu web."
 
 #. Author of the plugin/theme
 msgid "Leander Iversen"
