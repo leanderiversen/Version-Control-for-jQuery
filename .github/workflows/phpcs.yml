@@ -10,7 +10,7 @@ jobs:
       steps:
         - uses: actions/checkout@v3
         - name: Coding Standards for WordPress
-          uses: 10up/wpcs-action@stable
+          uses: 10up/wpcs-action@develop
           with:
             enable_warnings: true
             paths: 'src'
