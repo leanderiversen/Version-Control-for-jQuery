@@ -4,7 +4,7 @@ Version Control for jQuery is one of the easiest ways to control the version of 
 - Contributors: leanderiversen
 - Tags: jquery, core, migrate, javascript, update, control, version
 - Requires at least: 5.0
-- Tested up to: 6.3.1
+- Tested up to: 6.4.1
 - Stable tag: 3.8
 - Requires PHP: 7.4
 - License: GPLv3
