@@ -2,8 +2,8 @@
 Contributors: leanderiversen
 Tags: jquery, core, migrate, javascript, update, control, version, disable
 Requires at least: 5.0
-Tested up to: 6.5
-Stable tag: 3.9
+Tested up to: 6.6
+Stable tag: 4.0
 Requires PHP: 7.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -25,6 +25,9 @@ If you like the plugin, please review it! Every review is highly appreciated, bu
 
 
 == Changelog ==
+= 4.0 =
+* Added jQuery Migrate versions 3.5.0 and 3.5.2.
+
 = 3.9 =
 * Added Google CDN support for jQuery Core version 3.7.1.
 

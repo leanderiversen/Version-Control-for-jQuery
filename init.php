@@ -25,7 +25,7 @@ class Plugin {
 	public const DEFAULT_CORE = '3.7.1';
 
 	// Define the default version of jQuery Migrate.
-	public const DEFAULT_MIGRATE = '3.4.1';
+	public const DEFAULT_MIGRATE = '3.5.2';
 
 	// Define the default CDN.
 	public const DEFAULT_CDN = 'jquery';
