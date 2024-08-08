@@ -3,7 +3,7 @@
  * Plugin Name: Version Control for jQuery
  * Plugin URI: https://github.com/leanderiversen/version-control-for-jquery/
  * Description: Version Control for jQuery is the easiest way to control the version of jQuery used on your website.
- * Version: 4.0
+ * Version: 4.0.1
  * Author: Leander Iversen
  * Author URI: https://github.com/leanderiversen/
  * License: GPLv2 or later
