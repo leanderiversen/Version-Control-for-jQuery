@@ -6,16 +6,16 @@ Version Control for jQuery is one of the easiest ways to control the version of 
 - Tags: jquery, update, control, version
 - Requires at least: 5.0
 - Tested up to: 6.6
-- Stable tag: 4.0
+- Stable tag: 4.0.1
 - Requires PHP: 7.4
 - License: GPLv3
 - License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 ## Description
 
-Version Control for jQuery is one of the easiest ways to control the version of [jQuery](https://jquery.com/) used on your website. Whether you just want to run a stable WordPress website, or if you are a developer and want to validate compatibility on your website with the various version of jQuery, the plugin will always have the latest minified version of jQuery ready for you. By default, the files will be loaded from the fast [jQuery CDN](https://releases.jquery.com/), but you will also have the option to choose [cdnjs](https://cdnjs.com/), [Google CDN](https://developers.google.com/speed/libraries) or [jsDelivr](https://www.jsdelivr.com/).
+Version Control for jQuery is one of the easiest ways to control the version of [jQuery](https://jquery.com/) used on your website. Whether you just want to run a stable WordPress website, or if you are a developer and want to check compatibility of your website with the various versions of jQuery, the plugin will always have the latest minified version of jQuery ready for you. By default, the files will be loaded from the fast [jQuery CDN](https://releases.jquery.com/), but you will also have the option to choose [cdnjs](https://cdnjs.com/), [Google CDN](https://developers.google.com/speed/libraries) or [jsDelivr](https://www.jsdelivr.com/).
 
-Please notice that no files are replaced, therefore deactivation of this plugin returns your site to its original state.
+Please notice that no files are replaced, and therefore, deactivation of this plugin returns your site to its original state.
 
 ## Installation
 
@@ -24,6 +24,10 @@ Please notice that no files are replaced, therefore deactivation of this plugin 
 3. Sit back and enjoy, or select your desired version of jQuery
 
 ## Changelog
+
+### 4.0.1
+
+- Improvements to documentation.
 
 ### 4.0
 
