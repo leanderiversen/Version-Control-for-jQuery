@@ -1,6 +1,6 @@
 === Version Control for jQuery ===
 Contributors: leanderiversen
-Tags: jquery, core, migrate, javascript, update, control, version, disable
+Tags: jquery, update, control, version
 Requires at least: 5.0
 Tested up to: 6.6
 Stable tag: 4.0
