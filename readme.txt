@@ -1,6 +1,6 @@
 === Version Control for jQuery ===
 Contributors: leanderiversen
-Tags: jquery, core, migrate, javascript, update, control, version, disable
+Tags: jquery, update, control, version
 Requires at least: 5.0
 Tested up to: 6.6
 Stable tag: 4.0
@@ -26,7 +26,7 @@ If you like the plugin, please review it! Every review is highly appreciated, bu
 
 == Changelog ==
 = 4.0 =
-* Added jQuery Migrate versions 3.5.0 and 3.5.2.
+* Added jQuery Migrate versions 3.5.0, 3.5.1, and 3.5.2.
 
 = 3.9 =
 * Added Google CDN support for jQuery Core version 3.7.1.
