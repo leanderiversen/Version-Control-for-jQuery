@@ -2,8 +2,8 @@
 Contributors: leanderiversen
 Tags: jquery, update, control, version
 Requires at least: 5.0
-Tested up to: 6.6
-Stable tag: 4.0.1
+Tested up to: 6.7
+Stable tag: 4.0.2
 Requires PHP: 7.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -25,6 +25,9 @@ If you like the plugin, please review it! Every review is highly appreciated, bu
 
 
 == Changelog ==
+= 4.0.2 =
+* Support for WordPress 6.7.
+
 = 4.0.1 =
 * Improvements to documentation.
 
